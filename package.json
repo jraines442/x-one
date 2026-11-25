@@ -10,9 +10,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "eslint src/**/*.ts",
-    "test": "node --test",
-    "prepare": "npm run build"
+    "lint": "eslint src --ext .ts",
+    "test": "npm run build && node --test test/smoke.test.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "cli",
