@@ -1,7 +1,7 @@
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import type { GeneratorConfig } from '../types.js';
-import { createPackageJson, createViteConfig, createTsConfig } from './shared.js';
+import { createPackageJson, createTsConfig } from './shared.js';
 
 export async function generateReactTemplate(config: GeneratorConfig): Promise<void> {
   const { projectPath, name, typescript } = config;
@@ -18,7 +18,7 @@ export async function generateReactTemplate(config: GeneratorConfig): Promise<vo
     'react-dom': '^18.2.0',
   };
 
-  const devDependencies = {
+  const devDependencies: Record<string, string> = {
     '@types/react': '^18.2.0',
     '@types/react-dom': '^18.2.0',
     '@vitejs/plugin-react': '^4.2.0',
