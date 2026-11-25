@@ -1,9 +1,11 @@
 import { Command } from 'commander';
-import { prompt } from 'enquirer';
+import enquirer from 'enquirer';
+
+const { prompt } = enquirer;
 import chalk from 'chalk';
 import ora from 'ora';
-import { createProject } from '../generators/projectGenerator.js';
-import type { FrameworkType } from '../generators/types.js';
+import { createProject } from '../../generators/projectGenerator.js';
+import type { FrameworkType } from '../../generators/types.js';
 
 export const createCommand = new Command()
   .name('create')
