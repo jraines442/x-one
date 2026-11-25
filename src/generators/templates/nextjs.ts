@@ -40,13 +40,16 @@ export async function generateNextJsTemplate(config: GeneratorConfig): Promise<v
   // Create tsconfig.json
   createTsConfig(projectPath);
 
-  // Create next.config.js
+  // Create next.config.mjs
+  // The project is "type": "module", so the config must be ESM (.mjs).
+  // A CommonJS file here (module.exports) fails at startup.
   const nextConfigContent = `/** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-module.exports = nextConfig`;
+export default nextConfig
+`;
 
-  writeFileSync(join(projectPath, 'next.config.js'), nextConfigContent);
+  writeFileSync(join(projectPath, 'next.config.mjs'), nextConfigContent);
 
   // Create app/layout.tsx
   const layoutContent = `import type { Metadata } from 'next'
@@ -117,6 +120,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+}
+
+/* Global element styles belong here, not in CSS modules: CSS modules
+   reject selectors like "button" that are not scoped to a class. */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #646cff;
+}
+
+button:hover {
+  border-color: #646cff;
 }`;
 
   writeFileSync(join(appDir, 'globals.css'), globalsCss);
@@ -133,23 +155,6 @@ body {
 .card {
   padding: 2em;
   text-align: center;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: #646cff;
-}
-
-button:hover {
-  border-color: #646cff;
 }`;
 
   writeFileSync(join(appDir, 'page.module.css'), pageModuleCss);

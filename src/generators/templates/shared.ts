@@ -99,7 +99,7 @@ export function createTsConfig(
       moduleResolution: 'bundler',
       allowSyntheticDefaultImports: true,
     },
-    include: ['vite.config.ts', 'next.config.js'],
+    include: ['vite.config.ts', 'next.config.mjs'],
   };
 
   writeFileSync(
