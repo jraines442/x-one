@@ -50,7 +50,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 1. Fork the repository
 2. Clone your fork:
    ```bash
-   git clone https://github.com/yourusername/x-one.git
+   git clone https://github.com/jraines442/X-one.git
    cd x-one
    ```
 

@@ -9,7 +9,7 @@ Choose one of these methods to install X-one:
 ### Global Installation
 
 ```bash
-npm install -g x-one
+npm install -g @jraines442/x-one
 ```
 
 Then use it anywhere:
@@ -21,7 +21,7 @@ x-one create my-app
 ### Using npx (No Installation Required)
 
 ```bash
-npx x-one create my-app
+npx @jraines442/x-one create my-app
 ```
 
 ## Creating Your First Project
@@ -220,14 +220,14 @@ npm run build
 
 - 📖 Read the full [README](../README.md)
 - 🤝 Check out [Contributing Guidelines](../CONTRIBUTING.md)
-- 🐛 Found a bug? [Open an issue](https://github.com/yourusername/x-one/issues)
-- 💬 Have questions? [Start a discussion](https://github.com/yourusername/x-one/discussions)
+- 🐛 Found a bug? [Open an issue](https://github.com/jraines442/X-one/issues)
+- 💬 Have questions? [Start a discussion](https://github.com/jraines442/X-one/discussions)
 
 ## Need Help?
 
 - Check the [FAQ](./faq.md)
 - Visit the [Documentation](./README.md)
-- Search [existing issues](https://github.com/yourusername/x-one/issues)
-- Open a [new discussion](https://github.com/yourusername/x-one/discussions)
+- Search [existing issues](https://github.com/jraines442/X-one/issues)
+- Open a [new discussion](https://github.com/jraines442/X-one/discussions)
 
 Happy coding! 🚀
