@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepare": "tsc",
     "dev": "tsc --watch",
     "lint": "eslint src --ext .ts",
     "test": "npm run build && node --test test/smoke.test.js",
