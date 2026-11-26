@@ -1,33 +1,33 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
+import { detectProject, devCommandFor } from '../../utils/project.js';
+import { runTool } from '../../utils/run.js';
 
 export const devCommand = new Command()
   .name('dev')
-  .description('Start development server')
-  .option('-p, --port <port>', 'Port to run on', '5173')
-  .option('--host <host>', 'Host to bind to', 'localhost')
+  .description('Start the development server for the current project')
+  .option('-p, --port <port>', 'Port to run on (default: framework default)')
+  .option('--host <host>', 'Host to bind to (default: framework default)')
   .action(async (options) => {
     try {
-      const port = options.port;
-      const host = options.host;
+      const root = process.cwd();
+      const project = detectProject(root);
+      const command = devCommandFor(project.framework, {
+        port: options.port,
+        host: options.host,
+      });
 
-      console.log(chalk.blue.bold('\n🚀 Starting development server...\n'));
-      console.log(chalk.gray(`Server running at http://${host}:${port}`));
-      console.log(chalk.gray('Press Ctrl+C to stop\n'));
-
-      // This will be enhanced to actually run the dev server
-      // For now, it's a placeholder that explains zero-config behavior
       console.log(
-        chalk.yellow(
-          'Dev server configuration will be auto-detected based on your project structure.'
-        )
+        chalk.blue.bold(`\n🚀 Starting ${project.framework} dev server...\n`)
       );
-      console.log(chalk.yellow('No config file needed!\n'));
 
-      // Keep the process alive
-      await new Promise(() => {});
+      const code = await runTool(root, command);
+      process.exit(code);
     } catch (error) {
-      console.error(chalk.red('Error starting dev server:'), error);
+      console.error(
+        chalk.red('Error starting dev server:'),
+        error instanceof Error ? error.message : error
+      );
       process.exit(1);
     }
   });

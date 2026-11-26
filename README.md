@@ -81,19 +81,20 @@ x-one create my-app --template nextjs
 
 ### `x-one dev`
 
-Start development server with automatic configuration detection.
+Start the development server. X-one detects Vite or Next.js from your `package.json` and runs that tool.
 
 **Options:**
-- `-p, --port <port>` - Port to run on (default: 5173)
-- `--host <host>` - Host to bind to (default: localhost)
+- `-p, --port <port>` - Port to run on (default: the framework's default)
+- `--host <host>` - Host to bind to (default: the framework's default)
+
+Run it from inside a project folder, after `npm install`.
 
 ### `x-one build`
 
-Build your project for production with optimizations.
+Build the project for production using the detected framework.
 
 **Options:**
-- `--outdir <dir>` - Output directory (default: dist)
-- `--minify <type>` - Minification type (esbuild, terser)
+- `--outdir <dir>` - Output directory for Vite projects (default: `dist`). Ignored for Next.js, which writes to `.next/`.
 
 ## Project Structure
 
