@@ -164,7 +164,7 @@ dist-ssr
   // Create README.md
   const readmeContent = `# ${name}
 
-A modern Vite SPA built with [X-one](https://github.com/yourusername/x-one).
+A modern Vite SPA built with [X-one](https://github.com/jraines442/X-one).
 
 ## Features
 

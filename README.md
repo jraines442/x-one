@@ -125,7 +125,7 @@ X-one uses **zero configuration** by default, but you can customize:
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/x-one
+git clone https://github.com/jraines442/X-one
 cd x-one
 npm install
 npm run dev
@@ -179,8 +179,8 @@ MIT License - see LICENSE file for details
 ## Support
 
 - 📖 [Documentation](./docs)
-- 🐛 [Issue Tracker](https://github.com/yourusername/x-one/issues)
-- 💬 [Discussions](https://github.com/yourusername/x-one/discussions)
+- 🐛 [Issue Tracker](https://github.com/jraines442/X-one/issues)
+- 💬 [Discussions](https://github.com/jraines442/X-one/discussions)
 
 ## Inspiration
 

@@ -25,7 +25,7 @@
     "spa",
     "scaffolding"
   ],
-  "author": "",
+  "author": "Jay Raines <james.h.raines@outlook.com>",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
@@ -44,5 +44,13 @@
     "eslint": "^8.56.0",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jraines442/X-one.git"
+  },
+  "homepage": "https://github.com/jraines442/X-one#readme",
+  "bugs": {
+    "url": "https://github.com/jraines442/X-one/issues"
   }
 }

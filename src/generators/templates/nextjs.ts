@@ -201,7 +201,7 @@ next-env.d.ts`;
   // Create README.md
   const readmeContent = `# ${name}
 
-A modern Next.js SPA built with [X-one](https://github.com/yourusername/x-one).
+A modern Next.js SPA built with [X-one](https://github.com/jraines442/X-one).
 
 ## Features
 
@@ -228,7 +228,7 @@ npm run dev
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
-- [X-one Documentation](https://github.com/yourusername/x-one)
+- [X-one Documentation](https://github.com/jraines442/X-one)
 
 ## License
 
