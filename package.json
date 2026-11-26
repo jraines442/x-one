@@ -1,5 +1,5 @@
 {
-  "name": "x-one",
+  "name": "@jraines442/x-one",
   "version": "0.1.0",
   "description": "Build modern web projects with zero config",
   "type": "module",
@@ -52,5 +52,8 @@
   "homepage": "https://github.com/jraines442/X-one#readme",
   "bugs": {
     "url": "https://github.com/jraines442/X-one/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

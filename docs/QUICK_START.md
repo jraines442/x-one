@@ -9,7 +9,7 @@ Choose one of these methods to install X-one:
 ### Global Installation
 
 ```bash
-npm install -g x-one
+npm install -g @jraines442/x-one
 ```
 
 Then use it anywhere:
@@ -21,7 +21,7 @@ x-one create my-app
 ### Using npx (No Installation Required)
 
 ```bash
-npx x-one create my-app
+npx @jraines442/x-one create my-app
 ```
 
 ## Creating Your First Project

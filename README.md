@@ -29,13 +29,13 @@ X-one is a TypeScript CLI tool that scaffolds modern web applications with **zer
 ### Installation
 
 ```bash
-npm install -g x-one
+npm install -g @jraines442/x-one
 ```
 
 Or use with npx:
 
 ```bash
-npx x-one create my-app
+npx @jraines442/x-one create my-app
 ```
 
 ### Create a New Project
